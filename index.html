@@ -36,6 +36,15 @@
     @media(max-width:700px){.wrap{width:min(100% - 34px,540px)}.nav{min-height:67px}.brand-logo{width:153px;height:36px}.lang button{padding:5px 6px;font-size:10px}.nav-right{gap:8px}.hero-grid,.split,.visit-layout{grid-template-columns:1fr}.hero{padding-top:40px}.hero h1{font-size:clamp(42px,10.6vw,65px)}.hero-copy>p{font-size:16px}.hero-photo-wrap{max-width:510px;margin:9px auto 0;width:100%;padding-left:11px}.hero-photo{height:min(620px,113vw);max-height:560px;border-radius:190px 190px 24px 24px}.photo-tag{left:0;bottom:0}.statrow{margin-top:30px;gap:22px}.stat b{font-size:25px}.ribbon{font-size:9px;line-height:2;padding:12px 7px}.ribbon span{padding:0 10px}.section{padding:72px 0}.split{gap:30px}.sun-photo{height:420px}.gallery{grid-template-columns:1fr 1fr;gap:12px}.gallery-card{height:250px}.gallery-card:first-child{grid-column:1/-1;height:310px}.gallery-card figcaption{font-size:19px;left:16px;bottom:15px}.co-grid{grid-template-columns:1fr;gap:14px}.contact-panel{padding:26px 22px}.contact-panel .buttons{width:100%}.contact-panel .btn{flex:1}.visit-area{padding:70px 0}.visit-layout{gap:20px}.press-area{padding:72px 0}.footer-grid{grid-template-columns:1fr 1fr;gap:30px}.footer-grid>div:first-child{grid-column:1/-1}.footer-bottom{flex-wrap:wrap}.section-title{margin-bottom:26px}}
     @media(max-width:400px){.brand-logo{width:128px;height:32px}.lang{gap:0}.lang button{padding:5px 4px}.nav-right{gap:5px}.hero-photo{height:430px}.photo-tag{padding:12px 15px}.photo-tag b{font-size:18px}.btn{padding:10px 16px}.gallery-card{height:210px}.gallery-card:first-child{height:270px}.contact-panel .buttons{flex-direction:column}.contact-panel .btn{width:100%}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+
+    /* Thai needs comfortable glyph spacing and a legible Thai-capable font. */
+    html[lang="th"] body{font-family:Tahoma,"Noto Sans Thai",system-ui,sans-serif;line-height:1.85}
+    html[lang="th"] h1,html[lang="th"] h2,html[lang="th"] h3,html[lang="th"] .serif,html[lang="th"] .photo-tag b,html[lang="th"] .rulebox strong,html[lang="th"] .contact-panel h3,html[lang="th"] .press b{font-family:Tahoma,"Noto Sans Thai",system-ui,sans-serif;letter-spacing:normal;line-height:1.37}
+    html[lang="th"] .hero h1{font-size:clamp(36px,4.5vw,63px);line-height:1.4}
+    html[lang="th"] h2{font-size:clamp(31px,3.7vw,49px)}
+    html[lang="th"] .kicker,html[lang="th"] .ribbon{letter-spacing:.03em}
+    html[lang="th"] .hero-copy>p{line-height:1.9}
+    @media(max-width:700px){html[lang="th"] .hero h1{font-size:clamp(34px,8.2vw,49px)}}
   </style>
 </head>
 <body>
@@ -55,10 +64,11 @@
       <a href="#presse" data-i18n="navPress">Presse</a>
     </nav>
     <div class="nav-right">
-      <div class="lang" role="group" aria-label="Sprache / Language / Idioma">
+      <div class="lang" role="group" aria-label="Sprache / Language / Idioma / ภาษาไทย">
         <button type="button" data-language="de" aria-pressed="true" title="Deutsch">DE</button>
         <button type="button" data-language="en" aria-pressed="false" title="English">EN</button>
         <button type="button" data-language="es" aria-pressed="false" title="Español">ES</button>
+        <button type="button" data-language="th" aria-pressed="false" title="ภาษาไทย">TH</button>
       </div>
       <button class="mobile-toggle" id="mobile-toggle" aria-expanded="false" aria-controls="navlinks" aria-label="Menü öffnen">☰</button>
     </div>
@@ -179,7 +189,85 @@
       coopKicker:'Démosle una nueva vida a cosas bonitas',coopHeading:'Colaboraciones y objetos que buscan un nuevo hogar.',coopLead:'Nos encantará colaborar con tiendas y empresas, así como recibir propuestas de visitantes y particulares que tengan objetos especiales que ya no necesiten. Tal vez encuentren un nuevo lugar en nuestro jardín.',shopsHeading:'Para tiendas y empresas',shopsText:'Buscamos colaboraciones con tiendas, viveros, centros de jardinería, proveedores de decoración y otros negocios que compartan nuestra pasión por Tailandia, las plantas y los jardines.',shops1:'Ideas compartidas y colaboraciones creativas',shops2:'Decoración, Budas y esculturas tailandesas',shops3:'Plantas inusuales y piezas especiales para jardín',privateHeading:'Para visitantes y particulares',privateText:'¿Tienes un Buda, una decoración tailandesa, una escultura o una planta especial que ya no quieras o necesites? Antes de dejarla olvidada, puedes ofrecérnosla.',private1:'También aceptamos propuestas de objetos usados en buen estado',private2:'Envíanos una foto y una breve descripción',private3:'Te diremos si el objeto encaja en nuestro jardín',coopNote:'Por favor, no dejes objetos en el jardín sin avisar. Primero envíanos una foto por correo electrónico o mensaje de WhatsApp para ver si podemos aprovecharlos.',contactTitle:'¿Tienes una idea o algo para ofrecer?',contactText:'Nos encantará recibir tu mensaje. Solo mensajes por escrito; no llamadas.',emailBtn:'✉ Enviar un correo',whatsappBtn:'◉ Mensaje de WhatsApp',
       visitKicker:'Información importante para visitantes',visitHeading:'Un jardín privado con un ambiente muy especial.',visitText:'Little Thailand Garden se encuentra en la asociación de huertos Mannheim-Süd, en Mannheim-Neckarau. Es un jardín privado, no un parque público ni un establecimiento gastronómico.',visitText2:'Cuando la puerta está abierta, se puede visitar y tomar fotos en la zona permitida. Por favor, respeta las puertas cerradas, a los vecinos y los espacios privados señalizados.',ruleHeading:'¡Qué gusto verte!',rule1:'Puerta abierta: se permiten visitas y fotos',rule2:'Puerta cerrada: no entrar, por favor',rule3:'La línea roja marca la zona privada.',rule4:'No tenemos horarios fijos de apertura al público.',
       pressKicker:'En los medios',pressHeading:'Nuestro jardín tiene historias que contar.',pressText:'Varios medios regionales ya han hablado de Little Thailand Garden Mannheim.',pressSWR:'Televisión y cultura',pressMM:'Prensa regional',pressMH:'Historias de Mannheim',pressRP:'Reportajes de la región',socialKicker:'Más momentos de nuestro jardín',socialHeading:'Síguenos y descubre nuestro rincón de Tailandia.',socialText:'Encuentra nuevas ideas, esculturas, plantas especiales y fotos increíbles en Instagram.',contactAgain:'Contáctanos ↑',footerIntro:'Un pedacito de Tailandia en Mannheim-Neckarau. Un jardín privado dedicado al arte, la cultura y la naturaleza.',footerExplore:'Explorar',footerContact:'Contacto – solo mensajes',footerPrivate:'Jardín privado · No es un parque público'
-    }
+    },
+    th: {
+      "brandSub": "ธรรมชาติ · วัฒนธรรม<br>แรงบันดาลใจ",
+      "navGarden": "สวนของเรา",
+      "navImages": "ภาพถ่าย",
+      "navSupport": "ความร่วมมือและของบริจาค",
+      "navVisit": "การเข้าชม",
+      "navPress": "สื่อมวลชน",
+      "heroEyebrow": "สวนส่วนตัวอันแสนพิเศษในเมืองมันไฮม์",
+      "heroTitle": "สัมผัสกลิ่นอาย<em>เมืองไทย</em> ณ ใจกลางมันไฮม์",
+      "heroText": "พระพุทธรูปสีทอง พรรณไม้ที่งดงามแปลกตา และประติมากรรมกว่า 300 ชิ้น มาค้นพบความใส่ใจในทุกรายละเอียดของสวนส่วนตัวที่เราสร้างขึ้นด้วยความรัก",
+      "discover": "ชมสวนของเรา ↗",
+      "instagram": "อินสตาแกรมของเรา ↗",
+      "statSculptures": "ประติมากรรมทั้งภายในและภายนอก",
+      "statSize": "ประมาณ 3 เมตร",
+      "statBuddha": "พระพุทธรูปสีทอง",
+      "statPassion": "สร้างสรรค์ด้วยใจรัก",
+      "photoTagTitle": "จุดเด่นสีทองของสวน",
+      "photoTagText": "ความงดงามที่ไม่เหมือนใครในมันไฮม์-เนคเคอเรา",
+      "ribbonA": "ธรรมชาติและความสงบ",
+      "ribbonB": "ศิลปะและวัฒนธรรม",
+      "ribbonC": "แรงบันดาลใจจากไทย",
+      "introKicker": "ยินดีต้อนรับสู่ Little Thailand Garden",
+      "introHeading": "สวนเล็ก ๆ ที่มีเรื่องราวให้ค้นพบ",
+      "introLead": "เราทุ่มเทด้วยหัวใจสร้างโลกใบเล็กขึ้นในย่านมันไฮม์-เนคเคอเรา ให้ธรรมชาติ ศิลปะ และวัฒนธรรมไทยได้มาพบกัน",
+      "introBody": "ท่ามกลางพรรณไม้พิเศษ สีสันสดใส และประติมากรรมที่จัดวางอย่างพิถีพิถัน มีสิ่งใหม่ ๆ ให้ชมอยู่เสมอ โดยมีพระพุทธรูปสีทององค์ใหญ่เป็นจุดศูนย์กลางของสวน",
+      "introTick1": "ประติมากรรมกว่า 300 ชิ้น หลากหลายขนาด ทั้งภายในและภายนอก",
+      "introTick2": "สวนส่วนตัวที่เจ้าของออกแบบและตกแต่งด้วยตนเอง",
+      "introTick3": "พื้นที่ที่พัฒนาอย่างต่อเนื่อง เต็มไปด้วยไอเดียและของสะสมชิ้นพิเศษ",
+      "galleryKicker": "ภาพบรรยากาศของเรา",
+      "galleryHeading": "สัมผัสความเป็นไทยผ่านภาพถ่าย",
+      "galleryText": "ชมความงามของสวนในช่วงเวลาต่าง ๆ ตั้งแต่ยามบ่ายที่มีแสงแดดสดใสไปจนถึงยามค่ำคืนที่ประดับไฟสวยงาม",
+      "gallery1": "แสงอาทิตย์อัสดงสีทอง",
+      "gallery2": "พระพุทธรูปท่ามกลางสวนเขียวขจี",
+      "gallery3": "มนตร์เสน่ห์ยามค่ำคืน",
+      "galleryNote": "ภาพถ่ายทั้งหมดเป็นภาพจริงจาก Little Thailand Garden Mannheim",
+      "coopKicker": "ร่วมกันส่งต่อความงดงาม",
+      "coopHeading": "ความร่วมมือและของที่รอพบเจ้าของใหม่",
+      "coopLead": "เรายินดีร่วมงานกับร้านค้าและธุรกิจต่าง ๆ รวมทั้งรับข้อเสนอจากผู้มาเยือนหรือบุคคลทั่วไปที่มีสิ่งของพิเศษซึ่งไม่ได้ใช้แล้ว บางทีสิ่งของเหล่านั้นอาจมีที่แห่งใหม่ในสวนของเรา",
+      "shopsHeading": "สำหรับร้านค้าและธุรกิจ",
+      "shopsText": "เรามองหาความร่วมมือกับร้านค้า ศูนย์จัดสวน ร้านเพาะชำ ผู้จำหน่ายของตกแต่ง และพันธมิตรอื่น ๆ ที่มีความชื่นชอบในประเทศไทย พรรณไม้ และการจัดสวนเช่นเดียวกับเรา",
+      "shops1": "แบ่งปันไอเดียและสร้างสรรค์โครงการร่วมกัน",
+      "shops2": "ของตกแต่ง พระพุทธรูป และประติมากรรมสไตล์ไทย",
+      "shops3": "พรรณไม้แปลกตาและของตกแต่งสวนชิ้นพิเศษ",
+      "privateHeading": "สำหรับผู้มาเยือนและบุคคลทั่วไป",
+      "privateText": "คุณมีพระพุทธรูป ของตกแต่งแบบไทย ประติมากรรม หรือพรรณไม้พิเศษที่บ้าน ซึ่งไม่ต้องการหรือไม่ได้ใช้แล้วหรือไม่? หากไม่อยากปล่อยทิ้งไว้เฉย ๆ สามารถเสนอให้สวนของเราได้",
+      "private1": "ยินดีพิจารณาของมือสองที่ยังอยู่ในสภาพดี",
+      "private2": "ส่งภาพถ่ายพร้อมคำอธิบายสั้น ๆ มาได้เลย",
+      "private3": "เราจะแจ้งกลับว่าสิ่งของนั้นเหมาะกับสวนหรือไม่",
+      "coopNote": "สำคัญ: กรุณาอย่านำสิ่งของมาวางไว้ที่สวนโดยไม่ได้นัดหมาย โปรดส่งภาพถ่ายทางอีเมลหรือข้อความ WhatsApp ก่อน เพื่อให้เราตรวจสอบว่าสามารถนำมาใช้ได้หรือไม่",
+      "contactTitle": "มีไอเดียหรือสิ่งของอยากเสนอให้เราหรือไม่?",
+      "contactText": "เรายินดีรับข้อความจากคุณ กรุณาติดต่อเป็นข้อความเท่านั้น ไม่รับสายโทรศัพท์",
+      "emailBtn": "✉ ส่งอีเมล",
+      "whatsappBtn": "◉ ส่งข้อความ WhatsApp",
+      "visitKicker": "ข้อมูลสำคัญสำหรับผู้มาเยือน",
+      "visitHeading": "สวนส่วนตัวที่มีบรรยากาศไม่เหมือนใคร",
+      "visitText": "Little Thailand Garden ตั้งอยู่ในพื้นที่สวนจัดสรรของสมาคม Mannheim-Süd e. V. ในย่านมันไฮม์-เนคเคอเรา ที่นี่เป็นสวนส่วนตัว ไม่ใช่สวนสาธารณะหรือร้านอาหาร",
+      "visitText2": "เมื่อประตูสวนเปิด ผู้มาเยือนสามารถเข้าชมและถ่ายภาพได้เฉพาะบริเวณที่อนุญาต โปรดเคารพประตูที่ปิดอยู่ เพื่อนบ้าน และพื้นที่ส่วนตัวที่มีเครื่องหมายกำกับ",
+      "ruleHeading": "ยินดีที่ได้ต้อนรับ!",
+      "rule1": "ประตูเปิด: สามารถเข้าชมและถ่ายภาพในบริเวณที่อนุญาต",
+      "rule2": "ประตูปิด: กรุณาอย่าเข้าไปในพื้นที่",
+      "rule3": "เส้นสีแดงเป็นเครื่องหมายแสดงเขตพื้นที่ส่วนตัว",
+      "rule4": "ไม่มีเวลาเปิดให้เข้าชมที่กำหนดแน่นอน",
+      "pressKicker": "ข่าวและสื่อมวลชน",
+      "pressHeading": "เรื่องราวของสวนที่ได้รับความสนใจ",
+      "pressText": "สื่อท้องถิ่นหลายแห่งเคยนำเสนอเรื่องราวของ Little Thailand Garden Mannheim แล้ว",
+      "pressSWR": "โทรทัศน์และวัฒนธรรม",
+      "pressMM": "หนังสือพิมพ์ท้องถิ่น",
+      "pressMH": "เรื่องราวจากมันไฮม์",
+      "pressRP": "ข่าวจากภูมิภาค",
+      "socialKicker": "ชมภาพบรรยากาศเพิ่มเติม",
+      "socialHeading": "ติดตามสวนไทยเล็ก ๆ ของเรา",
+      "socialText": "พบไอเดียจัดสวน ประติมากรรม พรรณไม้พิเศษ และภาพบรรยากาศสวย ๆ ได้ทาง Instagram",
+      "contactAgain": "ติดต่อเรา ↑",
+      "footerIntro": "กลิ่นอายเมืองไทยในมันไฮม์-เนคเคอเรา สวนส่วนตัวที่สร้างสรรค์ด้วยความรักในศิลปะ วัฒนธรรม และธรรมชาติ",
+      "footerExplore": "สำรวจสวน",
+      "footerContact": "ติดต่อเรา – ส่งข้อความเท่านั้น",
+      "footerPrivate": "สวนส่วนตัว · ไม่ใช่สวนสาธารณะ"
+}
   };
   const original={};
   document.querySelectorAll('[data-i18n],[data-i18n-html]').forEach(el=>{
@@ -195,10 +283,24 @@
       const content=lang==='de'?original[key]:(dict[key]||original[key]);
       if(isHTML||key==='brandSub'){el.innerHTML=content}else{el.textContent=content}
     });
+    // Translate the descriptive photo captions used by screen readers.
+    const imageAltsTh=["พระพุทธรูปสีทององค์ใหญ่ท่ามกลางดอกไม้และพรรณไม้ใน Little Thailand Garden", "พระพุทธรูปสีทองท่ามกลางแสงอาทิตย์ยามเย็น มองเห็นซุ้มประตูสวนสไตล์ไทย", "ภาพระยะใกล้ของพระพุทธรูปสีทองในยามพระอาทิตย์ตก", "พระพุทธรูปสีทององค์ใหญ่ท่ามกลางดอกไม้และพืชพรรณสีเขียว", "ซุ้มประตูสวนสไตล์ไทยและพระพุทธรูปที่ประดับไฟในยามค่ำ"];
+    document.querySelectorAll('main img').forEach((img,i)=>{
+      if(!img.dataset.originalAlt)img.dataset.originalAlt=img.alt;
+      img.alt=lang==='th'?(imageAltsTh[i]||img.dataset.originalAlt):img.dataset.originalAlt;
+    });
+    document.querySelector('meta[name="description"]').setAttribute('content',lang==='th'?'Little Thailand Garden Mannheim สวนส่วนตัวกลิ่นอายไทยที่มีประติมากรรมกว่า 300 ชิ้นและพระพุทธรูปสีทององค์ใหญ่':'Little Thailand Garden Mannheim: Ein privater Garten voller thailändischer Kultur, über 300 Skulpturen und einem großen goldenen Buddha. Fotos, Einblicke und Kontakt.');
     document.querySelectorAll('[data-language]').forEach(el=>el.setAttribute('aria-pressed',String(el.dataset.language===lang)));
-    document.title='Little Thailand Garden Mannheim | '+(lang==='en'?'A piece of Thailand in Mannheim':lang==='es'?'Un pedacito de Tailandia en Mannheim':'Ein Stück Thailand mitten in Mannheim');
+    document.title='Little Thailand Garden Mannheim | '+(lang==='en'?'A piece of Thailand in Mannheim':lang==='es'?'Un pedacito de Tailandia en Mannheim':lang==='th'?'สัมผัสกลิ่นอายเมืองไทยในมันไฮม์':'Ein Stück Thailand mitten in Mannheim');
   }
-  document.querySelectorAll('[data-language]').forEach(btn=>btn.addEventListener('click',()=>switchLanguage(btn.dataset.language)));
+  document.querySelectorAll('[data-language]').forEach(btn=>btn.addEventListener('click',()=>{
+    switchLanguage(btn.dataset.language);
+    try{localStorage.setItem('ltg-language',btn.dataset.language)}catch(e){}
+  }));
+  try{
+    const saved=localStorage.getItem('ltg-language');
+    if(saved&&translations[saved])switchLanguage(saved);
+  }catch(e){}
   const toggle=document.getElementById('mobile-toggle'), nav=document.getElementById('navlinks');
   toggle.addEventListener('click',()=>{
     const open=nav.classList.toggle('open');
